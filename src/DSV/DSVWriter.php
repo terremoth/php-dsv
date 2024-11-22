@@ -17,6 +17,7 @@ class DSVWriter extends DSV
     {
         $file = fopen($this->outputFile, $mode);
         $size = count($data);
+        $lastRowNumber = $size - 1;
 
         /**
          * @var int $rowNumber
@@ -26,7 +27,7 @@ class DSVWriter extends DSV
             $newRow = implode($this->delimiter, $row);
 
             // the record separator shouldn't be added to the end of the file:
-            if ($rowNumber !== $size - 1) {
+            if ($rowNumber !== $lastRowNumber) {
                 $newRow .= $this->recordSeparator;
             }
 

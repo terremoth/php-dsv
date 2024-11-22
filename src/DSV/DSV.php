@@ -4,7 +4,6 @@ namespace DSV;
 
 class DSV
 {
-
     /**
      * @var non-empty-string
      */
