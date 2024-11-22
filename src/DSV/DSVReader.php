@@ -12,11 +12,14 @@ class DSVReader extends DSV
     public function __construct(public string $inputFile)
     {
         if (!file_exists($this->inputFile)) {
-            throw new Exception('Error: file '.$this->inputFile. ' not found.');
+            throw new Exception('Error: file ' . $this->inputFile . ' not found.');
         }
     }
 
-    public function read() : array
+    /**
+     * @return array
+     */
+    public function read(): array
     {
         $content = trim(file_get_contents($this->inputFile));
         $rows = explode($this->recordSeparator, $content);
