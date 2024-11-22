@@ -1,7 +1,6 @@
-# php-project-template
-My personal PHP projects template  
+# PHP DSV Reader & Writer
 
-Change the "vendor" word to the correct repo vendor name
+[Why you should use and prefer DSV format instead of CSV?](https://matthodges.com/posts/2024-08-12-csv-bad-dsv-good/)
 
 [![CodeCov](https://codecov.io/gh/terremoth/vendor/graph/badge.svg?token=TOKEN)](https://app.codecov.io/gh/terremoth/vendor)
 [![Psalm type coverage](https://shepherd.dev/github/terremoth/vendor/coverage.svg)](https://shepherd.dev/github/terremoth/vendor)
@@ -14,6 +13,3 @@ Change the "vendor" word to the correct repo vendor name
 See [demos/demo.php](demos/demo.php) for examples.
 
 ## Installation
-
-- Clone this repo:
-- `$ git clone ...`
