@@ -17,7 +17,7 @@ See [demos/demo.php](demos/demo.php) for examples.
 ## Installation
 
 ```shell
-composer require terremoth/php-dsv --no-dev
+composer require terremoth/php-dsv
 ```
 
 ## Usage
