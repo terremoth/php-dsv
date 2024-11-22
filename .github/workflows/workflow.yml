@@ -1,6 +1,16 @@
 name: Complete Workflow
 
-on: [ push, pull_request ]
+on:
+  push:
+    paths:
+      - '**/*.php'
+      - '**/*.css'
+      - '**/*.js'
+  pull_request:
+    paths:
+      - '**/*.php'
+      - '**/*.css'
+      - '**/*.js'
 
 jobs:
   run:
