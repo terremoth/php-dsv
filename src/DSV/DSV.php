@@ -2,7 +2,7 @@
 
 namespace DSV;
 
-class DSV
+abstract class DSV
 {
     /**
      * @var non-empty-string
