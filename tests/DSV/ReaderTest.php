@@ -6,8 +6,8 @@ use Exception;
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\TestCase;
 
-#[CoversClass(DSVReader::class)]
-class DSVReaderTest extends TestCase
+#[CoversClass(Reader::class)]
+class ReaderTest extends TestCase
 {
     /**
      * @throws Exception
@@ -25,7 +25,7 @@ class DSVReaderTest extends TestCase
 
         $totalFileLines = 6;
 
-        $reader = new DSVReader($tempFile);
+        $reader = new Reader($tempFile);
         $result = $reader->read();
         $this->assertEquals(count($result), $totalFileLines);
         unlink($tempFile);
@@ -37,7 +37,7 @@ class DSVReaderTest extends TestCase
     public function testException(): void
     {
         $this->expectException(Exception::class);
-        $reader = new DSVReader(random_int(0, 999999) . '.dsv');
+        $reader = new Reader(random_int(0, 999999) . '.dsv');
         $reader->read();
     }
 }

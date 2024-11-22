@@ -2,8 +2,8 @@
 
 require_once 'vendor/autoload.php';
 
-use DSV\DSVWriter;
-use DSV\DSVReader;
+use DSV\Writer;
+use DSV\Reader;
 
 $data = [
     ['Name', 'Comment'],
@@ -14,9 +14,9 @@ $data = [
     ['Edward', 'アップル'],
 ];
 
-$writer = new DSVWriter('demos/data.dsv');
+$writer = new Writer('demos/data.dsv');
 $writer->write($data);
 
-$reader = new DSVReader('demos/data.dsv');
+$reader = new Reader('demos/data.dsv');
 
 print_r($reader->read());

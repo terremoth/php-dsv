@@ -26,8 +26,8 @@ composer require terremoth/php-dsv
 ```php
 require_once 'vendor/autoload.php';
 
-use DSV\DSVWriter;
-use DSV\DSVReader;
+use DSV\Writer;
+use DSV\Reader;
 
 $data = [
     ['Name', 'Comment'],
@@ -38,9 +38,9 @@ $data = [
     ['Edward', 'アップル'],
 ];
 
-$writer = new DSVWriter('demos/data.dsv');
+$writer = new Writer('demos/data.dsv');
 $writer->write($data); // will write the $data to file in DSV format
 
-$reader = new DSVReader('demos/data.dsv');
+$reader = new Reader('demos/data.dsv');
 print_r($reader->read()); // will read the demos/data.dsv file and put it in array format 
 ```

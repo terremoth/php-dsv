@@ -6,8 +6,8 @@ use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\TestCase;
 
-#[CoversClass(DSVWriter::class)]
-class DSVWriterTest extends TestCase
+#[CoversClass(Writer::class)]
+class WriterTest extends TestCase
 {
     /**
      * @return array[]
@@ -49,7 +49,7 @@ class DSVWriterTest extends TestCase
     public function testWrite(array $data, string $result): void
     {
         $file = tempnam(sys_get_temp_dir(), 'dsv-test-data');
-        $writer = new DSVWriter($file);
+        $writer = new Writer($file);
         $writer->write($data);
         $this->assertEquals($result, file_get_contents($file));
         unlink($file);

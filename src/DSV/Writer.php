@@ -2,8 +2,10 @@
 
 namespace DSV;
 
-class DSVWriter extends DSV
+class Writer
 {
+    use DSV;
+
     public function __construct(protected string $outputFile)
     {
     }

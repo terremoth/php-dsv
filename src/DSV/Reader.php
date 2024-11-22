@@ -4,8 +4,10 @@ namespace DSV;
 
 use Exception;
 
-class DSVReader extends DSV
+class Reader
 {
+    use DSV;
+
     /**
      * @throws Exception
      */
